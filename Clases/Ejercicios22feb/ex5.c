@@ -147,13 +147,16 @@ struct TTimedEvent readTimedEvent(){
         printf("Marca de tiempo no válida.\n");
         exit(1); //Sale del programa con código de error 1
     }
-    if (tempEvent.evento != START || tempEvent.evento != STOP || tempEvent.evento != PAUSE || tempEvent.evento != FORWARD || tempEvent.evento != BACKWARD){
-        printf("Evento introducido no válido\n");
-        exit(1);
-    }
+    
     return tempEvent;
 }
 
+void showTimedEvent(const struct TTimedEvent *timedEvent){
+
+    printf("Evento: %s\n", eventToString(&timedEvent->evento));
+    printf("Marca de tiempo alcanzada: %d:%d:%d\n", timedEvent->marca.horas, timedEvent->marca.minutos, timedEvent->marca.segundos);
+
+}
 
 int main() {
     /* Apartado TTimeStamp*/
@@ -172,7 +175,7 @@ int main() {
 
     /* Apartado TTimedEvent*/
     struct TTimedEvent eventoMedido = readTimedEvent();
-
+    showTimedEvent(&eventoMedido);
 
     return 0;
     
