@@ -4,8 +4,8 @@
 /* Parte 1: algoritmo de descifrado
  * 	v: puntero a un bloque de 64 bits.
  * 	k: puntero a la clave para descifrar.
- * 	Sabiendd que unsiged int equivale a 4 bytes (32 bits)
- * 	Podemos usar la notaci�n de array con v y k
+ * 	Sabiendo que unsigned int equivale a 4 bytes (32 bits)
+ * 	Podemos usar la notacion de array con v y k
  * 	v[0] v[1] --- k[0] ... k[3]
  */
 void decrypt(unsigned int *v, unsigned int *k)

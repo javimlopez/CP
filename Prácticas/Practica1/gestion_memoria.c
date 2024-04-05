@@ -65,15 +65,16 @@ void obtener(T_Manejador *manejador, unsigned tam, unsigned* dir, unsigned* ok){
 }
 
 /* Muestra el estado actual de la memoria, bloques de memoria libre */
+
 void mostrar (T_Manejador manejador){
 	T_Manejador aux = manejador;
 	while(aux != NULL){
-		printf("[%u, %u] ", aux->inicio, aux->fin);
+		printf("**** Mostrando la memoria ****\n");
+		printf("[%u, %u]", aux->inicio, aux->fin);
 		aux = aux->sig;
 	}
 	printf("\n");
 }
-
 void insertarNodo(T_Manejador *manejador, unsigned inicio, unsigned tam){
 	//Caso base: lita vacia o el nuevo nodo tiene que insertarse antes del primero
 	if (*manejador == NULL || inicio < (*manejador)->inicio){
