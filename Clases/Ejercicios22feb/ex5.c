@@ -160,7 +160,6 @@ void showTimedEvent(const struct TTimedEvent *timedEvent){
 
 int main() {
     /* Apartado TTimeStamp*/
-    int horas, minutos, segundos;
     struct TTimeStamp marcaTiempo = readTimestamp();
     showTimestamp(&marcaTiempo);
 
