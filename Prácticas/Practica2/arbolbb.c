@@ -1,6 +1,6 @@
-#include "arbolbb.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include "arbolbb.h"
 
 // Crea la estructura utilizada para gestionar el árbol.
 void crear(T_Arbol* arbol){

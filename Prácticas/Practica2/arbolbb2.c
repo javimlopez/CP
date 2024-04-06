@@ -28,9 +28,9 @@ void insertar(T_Arbol* arbol,unsigned num){
             (*arbol)->der = NULL;
         }
     } else if(num < (*arbol)->dato){
-            insertar((*arbol)->izq, num);
+            insertar(&((*arbol)->izq), num);
     } else if(num > (*arbol)->dato){
-            insertar((*arbol)->der, num);
+            insertar(&((*arbol)->der), num);
     }
 }
 // Muestra el contenido del árbol en InOrden
